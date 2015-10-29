@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -53,6 +54,8 @@ public class TextModActivity extends ActionBarActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // bind the spinner and adapter
         spinner.setAdapter(adapter);
+
+
 
         // load the images from the resources
         //
@@ -103,6 +106,24 @@ public class TextModActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void ReverseText (View v) {
+        Spinner textSpinner = (Spinner) (findViewById(R.id.spinner));
+        EditText textWritten = (EditText) (findViewById(R.id.editText));
+
+        String original;
+        original = textWritten.getText().toString();
+        String finalString = "";
+
+        for(int i = textWritten.length() - 1; i>=0; i--)
+        {
+            finalString = finalString + original.charAt(i);
+
+        }
+
+        textWritten.setText(finalString);
+    }
+
     /**
      * class that handles our spinner's selection events
      */
@@ -127,5 +148,6 @@ public class TextModActivity extends ActionBarActivity {
         public void onNothingSelected(AdapterView<?> parentView) {
             // your code here
         }
+
     }
 }
