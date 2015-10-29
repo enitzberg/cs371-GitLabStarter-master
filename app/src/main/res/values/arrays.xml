@@ -12,6 +12,7 @@
         <item>@drawable/meme</item>
         <item>@drawable/combo_meme</item>
         <item>@mipmap/schmidt</item>
+        <item>@mipmap/death</item>
 
     </array>
 
@@ -22,6 +23,7 @@
         <item>Dank Meme Bro</item>
         <item>Even Danker Meme</item>
         <item>James Schmidt</item>
+        <item>He takes us all in the end...</item>
 
     </string-array>
 
