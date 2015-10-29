@@ -147,6 +147,29 @@ public class TextModActivity extends ActionBarActivity {
         textWritten.setText(finalString);
     }
 
+    public void alternateCase (View v) {
+        Spinner textSpinner = (Spinner) (findViewById(R.id.spinner));
+        EditText textWritten = (EditText) (findViewById(R.id.editText));
+
+        String original;
+        original = textWritten.getText().toString();
+        String finalString = "";
+
+        for(int i = 0; i<textWritten.length(); i++)
+        {
+            if(!(i%2 == 0))
+            {
+                finalString = finalString + Character.toLowerCase(original.charAt(i));
+            }
+            else
+            {
+                finalString = finalString + Character.toUpperCase(original.charAt(i));
+            }
+        }
+
+        textWritten.setText(finalString);
+    }
+
     /**
      * class that handles our spinner's selection events
      */
