@@ -77,6 +77,23 @@ public class TextModActivity extends ActionBarActivity {
 
     }
 
+
+    public void clearText(View view) {
+        EditText editText = (EditText)findViewById(R.id.editText);
+        editText.setText("");
+    }
+
+    public void upperCase(View view) {
+        EditText editText = (EditText)findViewById(R.id.editText);
+        String text = editText.getText().toString().toUpperCase();
+        editText.setText(text);
+    }
+
+    public void lowerCase(View view) {
+        EditText editText = (EditText)findViewById(R.id.editText);
+        String text = editText.getText().toString().toLowerCase();
+        editText.setText(text);
+    }
     /**
      * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
      */
