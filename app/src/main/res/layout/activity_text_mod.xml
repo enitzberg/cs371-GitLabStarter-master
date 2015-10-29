@@ -164,6 +164,15 @@
             android:layout_height="match_parent"
             android:layout_weight="10"  />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESTROY SPACES"
+            android:id="@+id/button3"
+            android:onClick="removeSpaces"
+            android:textColor="#ff0542ff"
+            android:background="#ffff7103" />
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
