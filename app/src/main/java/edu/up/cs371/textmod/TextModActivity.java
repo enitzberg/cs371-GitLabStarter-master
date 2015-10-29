@@ -147,6 +147,16 @@ public class TextModActivity extends ActionBarActivity {
         textWritten.setText(finalString);
     }
 
+    public void insertChar(View v) {
+        EditText edit = (EditText) findViewById(R.id.editText);
+        String originText = edit.getText().toString();
+        int index = (int) (Math.random() * originText.length());
+        char randomChar = (char) (Math.random() * 96 + 32);
+        String endText = originText.substring(0,index) + randomChar + originText.substring(index, originText.length());
+        edit.setText(endText);
+
+    }
+
     /**
      * class that handles our spinner's selection events
      */
