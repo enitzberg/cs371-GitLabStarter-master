@@ -147,6 +147,22 @@ public class TextModActivity extends ActionBarActivity {
         textWritten.setText(finalString);
     }
 
+
+    public void removeSpaces(View view) {
+        EditText editText = (EditText)findViewById(R.id.editText);
+
+        String text = editText.getText().toString();
+        String next = "";
+
+        for(int i=0; i < text.length(); i++) {
+            if(text.charAt(i) != ' ') {
+                next += text.charAt(i);
+            }
+        }
+
+        editText.setText(next);
+    }
+
     /**
      * class that handles our spinner's selection events
      */
