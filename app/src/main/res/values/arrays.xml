@@ -9,6 +9,8 @@
         <item>@mipmap/kitten</item>
         <item>@mipmap/nuxoll</item>
         <item>@mipmap/vegdahl</item>
+        <item>@drawable/meme</item>
+        <item>@drawable/combo_meme</item>
         <item>@mipmap/schmidt</item>
 
     </array>
@@ -17,6 +19,8 @@
         <item>Sleeping Kitten</item>
         <item>Dr. Andrew Nuxoll</item>
         <item>Dr. Steven Vegdahl</item>
+        <item>Dank Meme Bro</item>
+        <item>Even Danker Meme</item>
         <item>James Schmidt</item>
 
     </string-array>
