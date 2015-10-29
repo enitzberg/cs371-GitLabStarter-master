@@ -72,7 +72,6 @@ public class TextModActivity extends ActionBarActivity {
             images.add(img);
         }
 
-
         // define a listener for the spinner
         spinner.setOnItemSelectedListener(new MySpinnerListener());
 
@@ -111,6 +110,24 @@ public class TextModActivity extends ActionBarActivity {
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         EditText edit = (EditText) findViewById(R.id.editText);
         edit.setText(edit.getText() + spinner.getSelectedItem().toString());
+    }
+
+
+    public void ReverseText (View v) {
+        Spinner textSpinner = (Spinner) (findViewById(R.id.spinner));
+        EditText textWritten = (EditText) (findViewById(R.id.editText));
+
+        String original;
+        original = textWritten.getText().toString();
+        String finalString = "";
+
+        for(int i = textWritten.length() - 1; i>=0; i--)
+        {
+            finalString = finalString + original.charAt(i);
+
+        }
+
+        textWritten.setText(finalString);
     }
 
     /**
