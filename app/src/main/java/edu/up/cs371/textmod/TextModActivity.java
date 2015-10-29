@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -70,6 +72,7 @@ public class TextModActivity extends ActionBarActivity {
             images.add(img);
         }
 
+
         // define a listener for the spinner
         spinner.setOnItemSelectedListener(new MySpinnerListener());
 
@@ -101,6 +104,13 @@ public class TextModActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //adds the selected pictures name to the text in the edit text
+    public void copyName(View v) {
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        EditText edit = (EditText) findViewById(R.id.editText);
+        edit.setText(edit.getText() + spinner.getSelectedItem().toString());
     }
 
     /**
