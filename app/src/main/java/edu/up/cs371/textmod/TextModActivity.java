@@ -55,6 +55,8 @@ public class TextModActivity extends ActionBarActivity {
         // bind the spinner and adapter
         spinner.setAdapter(adapter);
 
+
+
         // load the images from the resources
         //
         // create the arraylist to hold the images
@@ -121,6 +123,24 @@ public class TextModActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void ReverseText (View v) {
+        Spinner textSpinner = (Spinner) (findViewById(R.id.spinner));
+        EditText textWritten = (EditText) (findViewById(R.id.editText));
+
+        String original;
+        original = textWritten.getText().toString();
+        String finalString = "";
+
+        for(int i = textWritten.length() - 1; i>=0; i--)
+        {
+            finalString = finalString + original.charAt(i);
+
+        }
+
+        textWritten.setText(finalString);
+    }
+
     /**
      * class that handles our spinner's selection events
      */
@@ -145,5 +165,6 @@ public class TextModActivity extends ActionBarActivity {
         public void onNothingSelected(AdapterView<?> parentView) {
             // your code here
         }
+
     }
 }
